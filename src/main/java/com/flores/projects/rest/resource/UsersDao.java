@@ -4,19 +4,16 @@ import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-
 import com.flores.projects.rest.model.User;
 
 /**
- * Singleton used to interact with stored content
+ * static class used to interact with users
  * @author Jason
  *
  */
 public class UsersDao {
 	
 	protected static Map<String, User> users;
-	
 	static {
 		users = new LinkedHashMap<String, User>() {
 			private static final long serialVersionUID = 1L; {
@@ -26,9 +23,6 @@ public class UsersDao {
 			}
 		};	
 	}
-	
-	@SuppressWarnings("unused")
-	private static final Logger logger = Logger.getLogger(UsersDao.class);
 	
 	/**
 	 * Return all users

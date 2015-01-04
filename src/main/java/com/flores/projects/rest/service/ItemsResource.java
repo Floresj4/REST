@@ -13,40 +13,43 @@ import javax.ws.rs.core.UriInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.flores.projects.rest.model.User;
-import com.flores.projects.rest.resource.UsersDao;
+import com.flores.projects.rest.model.Item;
+import com.flores.projects.rest.resource.ItemsDao;
 
 /**
- * Root resource class for users.
- *  
+ * Root resource class for items
+ * 
  * Object supports JSON and XML thru MOXy
  * @author Jason
- *
+ * 
  */
-@Path("/users")
-public class UsersResource {
+@Path("/items")
+public class ItemsResource {
 
 	@Context
 	private UriInfo uriInfo;
-
+	
 	/**
 	 * for server-side logging
 	 */
-	private static final Logger logger = LoggerFactory.getLogger(UsersResource.class);
-
-	public UsersResource() { }
-
+	private static final Logger logger = LoggerFactory.getLogger(ItemsResource.class);
+	
+	public ItemsResource() { }
+	
 	@GET @Path("{id}")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public User getUserObject(@PathParam("id") String id) {
-		logger.debug("getUserObject id {}", id);
-		return UsersDao.getUser(id);
+	public Item getItemObject(@PathParam("id") String id) {
+		logger.debug("getItemObject id {}", id);
+		Item i = ItemsDao.getItem(id);
+		System.out.println(i);
+		logger.debug("{}",i);
+		return i;
 	}
 	
 	@GET
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public Collection<User> getUsers() {
-		logger.debug("getUsers");
-		return UsersDao.getUsers();
+	public Collection<Item> getItems() {
+		logger.debug("getItems");
+		return ItemsDao.getItems();
 	}
 }

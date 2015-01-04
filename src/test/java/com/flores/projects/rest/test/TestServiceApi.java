@@ -32,12 +32,15 @@ public class TestServiceApi {
 
 	@BeforeClass
 	public static void init() {
+		//configure logging and target
 		PropertyConfigurator.configure("src/main/resources/log4j.properties");
 		config = new ClientConfig();
 		client = ClientBuilder.newClient(config);
 		target = client.target(UriBuilder.fromUri(BASE_URL).build());
 	}
 
+	//test users
+	
 	@Test
 	public void getUserById() {
 		String resource = "users/1";
@@ -51,6 +54,26 @@ public class TestServiceApi {
 	public void getUsers() {
 		String resource = "users/";
 		logger.debug("Selecting users from {}", resource);
+		String out = target.path(resource).request().accept(MediaType.APPLICATION_JSON).get(String.class);
+		logger.debug(out);
+		Assert.assertNotEquals(StringUtil.EMPTY_STRING_MSG, StringUtil.EMPTY_STRING, out);
+	}
+	
+	//test items
+
+	@Test
+	public void getItemById() {
+		String resource = "items/1AB2C3";
+		logger.info("Selecting item from {}", resource);
+		String out = target.path(resource).request().accept(MediaType.APPLICATION_JSON).get(String.class);
+		logger.debug(out);
+		Assert.assertNotEquals(StringUtil.EMPTY_STRING_MSG, StringUtil.EMPTY_STRING, out);
+	}
+	
+	@Test
+	public void getItems() {
+		String resource = "items/";
+		logger.debug("Selecting items from {}", resource);
 		String out = target.path(resource).request().accept(MediaType.APPLICATION_JSON).get(String.class);
 		logger.debug(out);
 		Assert.assertNotEquals(StringUtil.EMPTY_STRING_MSG, StringUtil.EMPTY_STRING, out);
