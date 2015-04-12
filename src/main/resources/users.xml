@@ -1,0 +1,61 @@
+<?xml version="1.1" encoding="utf-8" standalone="yes"?>
+<users>
+	<user>
+		<id>1</id>
+		<firstname>Kevin</firstname>
+		<lastname>Hart</lastname>
+		<birthdate>19790706</birthdate>
+		<bio>
+			Hart is an actor and producer, known for Kevin Hart: Let Me Explain (2013), 
+			Ride Along (2014) and The Wedding Ringer (2015). He was previously married 
+			to Torrei Hart.
+		</bio>
+	</user>
+	<user>
+		<id>2</id>
+		<firstname>Russell</firstname>
+		<lastname>Peters</lastname>
+		<birthdate>19700929</birthdate>
+		<bio>
+			Peters is an actor and producer, known for Source Code (2011), Russell 
+			Peters: The Green Card Tour - Live from The O2 Arena (2011) and Russell 
+			Peters: Two Concerts, One Ticket (2006).
+		</bio>
+	</user>
+	<user>
+		<id>3</id>
+		<firstname>Will</firstname>
+		<lastname>Ferrell</lastname>
+		<birthdate>19790716</birthdate>
+		<bio>
+			A graduate of the University of Southern California, Ferrell became interested 
+			in performing while a student at University High School in Irvine, where he 
+			made his school's daily morning announcements over the public address system 
+			in disguised voices. He started as a member of the Los Angeles comedy/improvisation 
+			group The Groundlings, where fellow cast members Ana Gasteyer, Maya Rudolph and 
+			former Saturday Night Live (1975) repertory players such as Laraine Newman, 
+			Jon Lovitz and Phil Hartman began their careers. It was there he met Chris 
+			Kattan and the two became good friends and both went on to Saturday Night Live 
+			(1975) later. He has also appeared on several television programs, including 
+			Strangers with Candy (1999), Grace Under Fire (1993) and Living Single (1993) 
+			during his time at The Groundlings. Will also lent his voice to the armless 
+			and legless dad of cartoon family "The Oblongs".
+		</bio>
+	</user>
+	<user>
+		<id>4</id>
+		<firstname>Ben</firstname>
+		<lastname>Stiller</lastname>
+		<birthday>19651130</birthday>
+		<bio>
+			Before he even got his start in Hollywood, Ben put in several consistently solid 
+			years in the theater. After dropping out of UCLA, he performed in the Tony Award 
+			winner, "The House of Blue Leaves". While working on the play, Stiller shot a 
+			short spoof of The Color of Money (1986) starring him (in the Tom Cruise role) 
+			and his American Playhouse: The House of Blue Leaves (1987) costar John Mahoney 
+			(in the Paul Newman role). The short film was so funny that Lorne Michaels purchased 
+			it and aired it on Saturday Night Live (1975). This led to Ben spending a year on 
+			the show in 1989.
+		</bio>
+	</user>
+</users>
