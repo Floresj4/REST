@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import com.flores.projects.rest.model.IUser;
 import com.flores.projects.rest.service.UsersController;
+import com.flores.projects.rest.util.LinkAdapter;
 
 /**
  * User resource used to interact with HTTP-verbs PUT, POST, GET, and DELETE.
@@ -78,7 +79,7 @@ public class UserResource implements IUser {
 	}
 	
 	@XmlElement(name = "link")
-	@XmlJavaTypeAdapter(Link.JaxbAdapter.class)
+	@XmlJavaTypeAdapter(LinkAdapter.class)
 	public Link getLink() {
 		return link;
 	}

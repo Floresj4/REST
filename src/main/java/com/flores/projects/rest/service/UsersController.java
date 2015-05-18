@@ -1,18 +1,14 @@
 package com.flores.projects.rest.service;
 
 import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
-import javax.ws.rs.core.Link;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,13 +32,6 @@ public class UsersController {
 	private UriInfo uriInfo;
 
 	private IUsersDao userInteraction;
-	
-	private List<Link> links = new LinkedList<>();
-	
-	@XmlJavaTypeAdapter(Link.JaxbAdapter.class)
-	public List<Link> getLinks() {
-		return links;
-	}
 	 
 	/**
 	 * for server-side logging

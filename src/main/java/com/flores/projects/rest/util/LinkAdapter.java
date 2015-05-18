@@ -10,16 +10,30 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.namespace.QName;
 
+/**
+ * Taken from a StackOverflow post http://stackoverflow.com/questions/24968448/jax-rs-hateoas-using-jersey-unwanted-link-properties-in-json
+ * to resolve a #toString() bug in the jersey-media-moxy library when creating JSON links.  One of these days
+ * they'll get around to it...
+ * 
+ * @author Jason
+ */
 public class LinkAdapter extends XmlAdapter<LinkJaxb, Link> {
 
 	@Override
 	public Link unmarshal(LinkJaxb v) throws Exception {
-		return null;
+		Link.Builder builder = Link.fromUri(v.getUri());
+		for(Map.Entry<QName, Object>entry : v.getParams().entrySet()) {
+			builder.param(entry.getKey().getLocalPart(), entry.getValue().toString());
+		}
+		return builder.build();
 	}
 
 	@Override
 	public LinkJaxb marshal(Link v) throws Exception {
-		return null;
+		Map<QName, Object> params = new HashMap<>();
+		for(Map.Entry<String, String> entry : v.getParams().entrySet())
+			params.put(new QName("", entry.getKey()), entry.getValue());
+		return new LinkJaxb(v.getUri(), params);
 	}	
 }
 
