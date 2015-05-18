@@ -1,8 +1,8 @@
-package com.flores.projects.rest.resource;
+package com.flores.projects.rest.interaction;
 
 import java.util.Collection;
 
-import com.flores.projects.rest.model.User;
+import com.flores.projects.rest.model.impl.User;
 
 /**
  * 

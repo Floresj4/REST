@@ -1,4 +1,4 @@
-package com.flores.projects.rest.resource;
+package com.flores.projects.rest.interaction;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +14,7 @@ import org.jdom.input.SAXBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.flores.projects.rest.model.User;
+import com.flores.projects.rest.model.impl.User;
 
 /**
  * Interaction class for user information obtained
@@ -54,9 +54,9 @@ public class UsersXmlDao implements IUsersDao {
 				users.put(user.getId(), user);
 			}
 		} 
-		catch(JDOMException jde) 
+		catch(JDOMException jde)
 		{ logger.error("Error parsing users.xml: {}", jde.getMessage()); } 
-		catch(IOException ioe) 
+		catch(IOException ioe)
 		{ logger.error("Error loading users.xml: {}", ioe.getMessage()); }
 	}
 
@@ -79,7 +79,7 @@ public class UsersXmlDao implements IUsersDao {
 	
 	public static User getUser(Element element) {
 		User u = new User();
-		u.setId(Integer.parseInt(element.getChildText("id")));
+		u.setId(Integer.parseInt(element.getAttributeValue("id")));
 		u.setFirstname(element.getChildText("firstname"));
 		u.setLastname(element.getChildText("lastname"));
 		u.setBio(element.getChildText("bio"));

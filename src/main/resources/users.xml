@@ -1,7 +1,6 @@
 <?xml version="1.1" encoding="utf-8" standalone="yes"?>
 <users>
-	<user>
-		<id>1</id>
+	<user id="1">
 		<firstname>Kevin</firstname>
 		<lastname>Hart</lastname>
 		<birthdate>19790706</birthdate>
@@ -11,8 +10,7 @@
 			to Torrei Hart.
 		</bio>
 	</user>
-	<user>
-		<id>2</id>
+	<user id="2">
 		<firstname>Russell</firstname>
 		<lastname>Peters</lastname>
 		<birthdate>19700929</birthdate>
@@ -22,8 +20,7 @@
 			Peters: Two Concerts, One Ticket (2006).
 		</bio>
 	</user>
-	<user>
-		<id>3</id>
+	<user id="3">
 		<firstname>Will</firstname>
 		<lastname>Ferrell</lastname>
 		<birthdate>19790716</birthdate>
@@ -42,11 +39,10 @@
 			and legless dad of cartoon family "The Oblongs".
 		</bio>
 	</user>
-	<user>
-		<id>4</id>
+	<user id="4">
 		<firstname>Ben</firstname>
 		<lastname>Stiller</lastname>
-		<birthday>19651130</birthday>
+		<birthdate>19651130</birthdate>
 		<bio>
 			Before he even got his start in Hollywood, Ben put in several consistently solid 
 			years in the theater. After dropping out of UCLA, he performed in the Tony Award 
