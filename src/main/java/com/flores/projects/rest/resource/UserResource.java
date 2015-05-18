@@ -11,7 +11,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import com.flores.projects.rest.model.IUser;
-import com.flores.projects.rest.model.impl.User;
 import com.flores.projects.rest.service.UsersController;
 
 /**
@@ -41,8 +40,12 @@ public class UserResource implements IUser {
 	 */
 	public UserResource() { }
 	
-	public UserResource(User user, UriInfo uriInfo) {
-//		this.user = user;
+	public UserResource(IUser user, UriInfo uriInfo) {
+		this.id = user.getId();
+		this.firstname = user.getFirstname();
+		this.lastname = user.getLastname();
+		this.bio = user.getBio();
+		this.birthdate = user.getBirthdate();
 		this.link = Link.fromUriBuilder(uriInfo.getBaseUriBuilder()
 				.path(UsersController.class, "getUsers"))
 				.rel("users")
