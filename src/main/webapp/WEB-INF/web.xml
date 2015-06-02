@@ -7,6 +7,7 @@
 	version="2.5">
 	
 	<servlet>
+		<!-- servlet spec 3.0 would allow an FQN for servlet-name where class implementation is of #Application -->
 		<servlet-name>Jersey Web Application</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
 		<!-- configuration using resources by classname -->
