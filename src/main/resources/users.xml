@@ -57,7 +57,7 @@
 	<user id="5">
 		<firstname>Chris</firstname>
 		<lastname>Pratt</lastname>
-		<birthdate></birthdate>
+		<birthdate>19792106</birthdate>
 		<bio>
 			Christopher Michael Pratt is an American film and television actor. Pratt played 
 			major supporting roles in several television series, including Everwood (2002), 
@@ -68,6 +68,38 @@
 			Quill in Guardians of the Galaxy (2014). In 2015, he headlined the sci-fi thriller 
 			Jurassic World (2015), and began filming on the western remake The Magnificent Seven 
 			(2017), with Denzel Washington and Ethan Hawke.
+		</bio>
+	</user>
+	<user id="6">
+		<firstname>Winter Ave</firstname>
+		<lastname>Zoli</lastname>
+		<birthdate>19800330</birthdate>
+		<bio>
+			Winter Ave Zoli was born in New Hope, Pennsylvania. At the age of 11, she moved with 
+			her family to Prague, Czech Republic, where she was able to fully plant her Czech roots 
+			from her fathers side of the family. She studied middle school and high school at the 
+			International School of Prague. She transitioned her way from ballet to musical theater, 
+			developing a love for the stage, and for the craft of acting. She began working 
+			professionally at the age of 13, and developed her resume through acting opportunities 
+			on European and American productions that came through Prague. At 17, she attended the 
+			Carnegie-Mellon summer school theater program, and at 19 enrolled in the Atlantic Theater 
+			Company acting school in New York city, founded by playwright David Mamet, and actor 
+			William H. Macy. After graduating from the professional program, Winter moved to Los Angeles, 
+			where she resides. Besides acting, her most beloved moments come from horse back 
+			riding, yoga, and running in the canyons of Los Angeles.
+		</bio>
+	</user>
+	<user id="7">
+		<firstname>Taylor</firstname>
+		<lastname>Schilling</lastname>
+		<birthdate>19840727</birthdate>
+		<bio>
+			Taylor Schilling was born in Boston, Massachusetts. Her father, Robert, is a former 
+			prosecutor, and her mother, Patricia "Tish" (Miller), works in administration at MIT. 
+			Taylor attended Wayland High School, but graduated from West Roxbury High School in 
+			2002, and made her film debut in Dark Matter (2007). She starred in the movies Atlas 
+			Shrugged: Part I (2011) and The Lucky One (2012), and has a role in director Ben Affleck's 
+			Argo (2012).
 		</bio>
 	</user>
 </users>
