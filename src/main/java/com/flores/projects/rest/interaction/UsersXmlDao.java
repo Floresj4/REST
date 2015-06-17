@@ -27,7 +27,7 @@ public class UsersXmlDao implements IUsersDao {
 	
 	protected static Map<Integer, User> users;
 	
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("YYYYMMdd");
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
 	
 	private static final Logger logger = LoggerFactory.getLogger(UsersXmlDao.class);
 
