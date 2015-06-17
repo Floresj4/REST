@@ -54,4 +54,20 @@
 			the show in 1989.
 		</bio>
 	</user>
+	<user id="5">
+		<firstname>Chris</firstname>
+		<lastname>Pratt</lastname>
+		<birthdate></birthdate>
+		<bio>
+			Christopher Michael Pratt is an American film and television actor. Pratt played 
+			major supporting roles in several television series, including Everwood (2002), 
+			The O.C. (2003), and Parks and Recreation (2009), and notable film roles in Moneyball 
+			(2011), The Five-Year Engagement (2012), Zero Dark Thirty (2012), and Delivery Man 
+			(2013). In 2014, he broke out after headlining two of the year's biggest films: he 
+			voiced the lead, Emmet Brickowoski, in The Lego Movie (2014), and starred as Peter 
+			Quill in Guardians of the Galaxy (2014). In 2015, he headlined the sci-fi thriller 
+			Jurassic World (2015), and began filming on the western remake The Magnificent Seven 
+			(2017), with Denzel Washington and Ethan Hawke.
+		</bio>
+	</user>
 </users>
