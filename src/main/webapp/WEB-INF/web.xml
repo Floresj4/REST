@@ -23,16 +23,16 @@
 		</init-param> -->
 		
 		<!-- configuration using Application model -->
-		<!-- <init-param>
+		<init-param>
 			<param-name>javax.ws.rs.Application</param-name>
 			<param-value>com.flores.projects.rest.app.UserApplication</param-value>
-		</init-param> -->
+		</init-param>
 		
 		<!-- configuration using concrete resource or provider -->
-		<init-param>
+		<!-- init-param>
 			<param-name>jersey.config.server.provider.classnames</param-name>
 			<param-value>com.flores.projects.rest.service.UsersController</param-value>
-		</init-param>
+		</init-param> -->
 
 		<load-on-startup>1</load-on-startup>
 	</servlet>
