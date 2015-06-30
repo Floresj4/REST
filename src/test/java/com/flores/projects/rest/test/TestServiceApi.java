@@ -10,6 +10,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.glassfish.jersey.client.ClientConfig;
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,7 @@ import org.slf4j.LoggerFactory;
  * @author Jason
  *
  */
+@Ignore
 public class TestServiceApi {
 
 	public static final String BASE_URL = "http://localhost:8080/RESTfulWebService/resources/";
