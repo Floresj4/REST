@@ -95,7 +95,7 @@
 							<assembleDirectory>target</assembleDirectory>
 							<programs>
 								<program>
-									<mainClass>org.example.Main</mainClass>
+									<mainClass>com.flores.projects.rest.GrizzlyStart</mainClass>
 									<name>app</name>
 								</program>
 							</programs>
