@@ -28,10 +28,18 @@
 
 	<dependencies>
 
-		<!-- jersey and jaxb -->
+		<!-- jersey, grizzly, and jaxb -->
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet-core</artifactId>
+		</dependency>
+		<dependency><!-- for grizzly container-->
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-grizzly2-http</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-jdk-http</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
@@ -71,6 +79,29 @@
 					<source>1.7</source>
 					<target>1.7</target>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+						<configuration>
+							<assembleDirectory>target</assembleDirectory>
+							<programs>
+								<program>
+									<mainClass>org.example.Main</mainClass>
+									<name>app</name>
+								</program>
+							</programs>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
 			<plugin>
