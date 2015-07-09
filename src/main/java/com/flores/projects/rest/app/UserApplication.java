@@ -10,7 +10,7 @@ import org.glassfish.jersey.server.ResourceConfig;
  * 
  * @author Jason
  */
-@ApplicationPath("resources")
+@ApplicationPath("/resources")
 public class UserApplication extends ResourceConfig {
 	public UserApplication() {
 		packages("com.flores.projects.rest.service");

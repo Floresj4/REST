@@ -49,7 +49,7 @@ public class UsersController {
 		return new UserResource(userInteraction.getUser(Integer.parseInt(id)), uriInfo);
 	}
 	
-	@GET @Path("")
+	@GET @Path("/")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public Collection<User> getUsers() {
 		logger.debug("getUsers");
