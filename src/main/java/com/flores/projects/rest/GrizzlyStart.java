@@ -16,8 +16,8 @@ import com.flores.projects.rest.app.UserApplication;
  */
 public class GrizzlyStart {
 	public static void main(String args[]) throws IOException, InterruptedException {
-		URI baseUri = UriBuilder.fromUri("http://localhost")
-			.port(Integer.parseInt(System.getenv("PORT"))).build();
+		int port = Integer.parseInt(System.getenv("PORT") == null ? "15351" : System.getenv("PORT"));
+		URI baseUri = UriBuilder.fromUri("http://localhost").port(port).build();
 
 		System.out.println("Starting Grizzly...");
 		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(baseUri, new UserApplication());
