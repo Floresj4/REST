@@ -1,1 +1,1 @@
-web:    target/bin/app.bat
+web: java -cp target/classes;target/dependency/* com.flores.projects.rest.GrizzlyStart
