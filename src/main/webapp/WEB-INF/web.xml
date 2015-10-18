@@ -5,34 +5,31 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
-	
+
 	<servlet>
-		<!-- servlet spec 3.0 would allow an FQN for servlet-name where class implementation is of #Application -->
+		<!-- servlet spec 3.0 would allow an FQN for servlet-name where class implementation 
+			is of #Application -->
 		<servlet-name>Jersey Web Application</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
 		<!-- configuration using resources by classname -->
-		<!-- <init-param>	
-			<param-name>jersey.config.server.provider.classnames</param-name>
-			<param-value>com.flores.projects.rest.service.UsersController</param-value>
-		</init-param> -->
-		
+		<!-- <init-param> <param-name>jersey.config.server.provider.classnames</param-name> 
+			<param-value>com.flores.projects.rest.service.UsersController</param-value> 
+			</init-param> -->
+
 		<!-- configuration using resources by package scanning -->
-		<!-- <init-param>
-			<param-name>jersey.config.server.provider.packages</param-name>
-			<param-value>com.flores.projects.rest.service</param-value>
-		</init-param> -->
-		
+		<!-- <init-param> <param-name>jersey.config.server.provider.packages</param-name> 
+			<param-value>com.flores.projects.rest.service</param-value> </init-param> -->
+
 		<!-- configuration using Application model -->
 		<init-param>
 			<param-name>javax.ws.rs.Application</param-name>
 			<param-value>com.flores.projects.rest.app.UserApplication</param-value>
 		</init-param>
-		
+
 		<!-- configuration using concrete resource or provider -->
-		<!-- init-param>
-			<param-name>jersey.config.server.provider.classnames</param-name>
-			<param-value>com.flores.projects.rest.service.UsersController</param-value>
-		</init-param> -->
+		<!-- init-param> <param-name>jersey.config.server.provider.classnames</param-name> 
+			<param-value>com.flores.projects.rest.service.UsersController</param-value> 
+			</init-param> -->
 
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -41,4 +38,12 @@
 		<url-pattern>/resources/*</url-pattern>
 	</servlet-mapping>
 
+	<filter>
+		<filter-name>CORS</filter-name>
+		<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CORS</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>

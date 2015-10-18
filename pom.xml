@@ -57,6 +57,13 @@
 			<artifactId>jersey-media-moxy</artifactId>
 		</dependency>
 
+		<!-- CORS filtering -->
+		<dependency>
+			<groupId>com.thetransactioncompany</groupId>
+			<artifactId>cors-filter</artifactId>
+			<version>2.4</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
